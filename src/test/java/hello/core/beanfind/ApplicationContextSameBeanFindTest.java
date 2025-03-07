@@ -23,7 +23,7 @@ public class ApplicationContextSameBeanFindTest {
     @Test
     @DisplayName("타입 조회 시 같은 타입이 둘 이상 있으면, 에러가 발생한다.")
     void findBeanByTypeDuplicate() {
-        MemberRepository bean = ac.getBean(MemberRepository.class);
+//        MemberRepository bean = ac.getBean(MemberRepository.class);
         assertThrows(NoUniqueBeanDefinitionException.class,
                 () -> ac.getBean(MemberRepository.class));
     }
